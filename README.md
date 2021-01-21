@@ -1,1 +1,3 @@
 # Capstone-IMDB-movie-reviews
+
+The real world is filled with text data and is mostly unorganised, hence cleaning and handling text is an important step towards making smarter Machine Learning algorithms. IMDB dataset is one of such usual messy data sets which hides a lot of information under the hood which is awaiting to be discovered. The dataset contains positive and negative reviews (Binary Classification). There is an additional unlabeled data for the usage. The aim of the project is to perform sentiment analysis and find happy as well as unhappy customers.
