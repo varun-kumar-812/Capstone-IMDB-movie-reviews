@@ -1,2 +1,1 @@
-LazyModule
-
+_LazyModule__lazymodule_globals
