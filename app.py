@@ -2,16 +2,16 @@ from flask import Flask, request, render_template
 import pickle
 import string
 import re
-import nltk
+from nltk import PorterStemmer, corpus
 
 app = Flask(__name__)
 model = pickle.load(open('Logistic_regression_model.pkl','rb'))
 
 def cleanText(text):
     clean = re.compile('<.*?>')
-    ps = nltk.PorterStemmer()
-    stopwords = nltk.corpus.stopwords.words('english')
-            
+    ps = PorterStemmer()
+    stopwords = corpus.stopwords.words('english')
+
     html = re.sub(clean,'',text)
     p_text = ''.join([i.lower() for i in html if i not in string.punctuation])
     token = re.split('\W+',p_text)
