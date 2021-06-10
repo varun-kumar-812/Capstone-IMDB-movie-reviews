@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Sentiment Analysis Of Movie Review</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+    	<textarea name="review" id='rev' required="required"></textarea>
+	<br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large" id = 'btn'>SUBMIT</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+<style>
+	body {
+        	background-color: lightblue;
+        	text-align: center;
+        	padding: 0px;
+        }
+        #rev{
+        	border-radius: 14px;
+        	height: 200px;
+        	width : 400px;
+        	font-size: 15px;
+        	border: 2px solid Tomato;
+        		
+        }
+        #btn{
+        	border: 2px solid Tomato;
+        	background-color: coral;
+        	border-radius: 6px;
+        	height: 40px;
+        	width : 80px;
+        }
+        
+</style>
+
+</body>
+</html>
